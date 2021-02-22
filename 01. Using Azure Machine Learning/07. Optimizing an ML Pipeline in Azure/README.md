@@ -68,3 +68,5 @@ About the AutoML, I would like to increase experiment timeout minutes in order t
 **If you did not delete your compute cluster in the code, please complete this section. Otherwise, delete this section.**
 **Image of cluster marked for deletion**
 I cleaned up the resources used on my own Azure cloud Subscription.
+![Compute Cluster](img/compute-cluster.png)
+![Compute Cluster Deleted](img/compute-clusters-deleted.png)
