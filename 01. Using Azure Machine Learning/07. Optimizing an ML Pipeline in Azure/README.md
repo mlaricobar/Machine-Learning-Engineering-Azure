@@ -2,7 +2,7 @@
 
 ## Overview
 This project is part of the Udacity Azure ML Nanodegree.
-In this project, I build and optimize an Azure ML pipeline using the Python SDK and a provided Scikit-learn model.
+In this project, I built and optimized an Azure ML pipeline using the Python SDK and a provided Scikit-learn model.
 This model is then compared to an Azure AutoML run.
 
 The diagram below shows the main steps of creating and optimizing an ML pipeline:
@@ -16,9 +16,9 @@ This <a href="https://automlsamplenotebookdata.blob.core.windows.net/automl-samp
 
 **In 1-2 sentences, explain the solution: e.g. "The best performing model was a ..."**
 
-The best performing model was **Voting Ensemble** with an accuracy of **91.745%** using the AutoMl approach. 
+The best performing model was **Voting Ensemble** with an accuracy of **91.745%** using the AutoML approach. 
 
-I first create and optimize the hyperparameters of a standard Scikit-learn Logistic Regression using **HyperDrive**. I performed 24 runs to find the best hyperparameters using HyperDrive and the highest reported accuracy was **90.895%**. 
+I first created and optimized the hyperparameters of a standard Scikit-learn Logistic Regression using **HyperDrive**. I performed 24 runs to find the best hyperparameters using HyperDrive and the highest reported accuracy was **90.895%**. 
 
 ![Hyperparameter Tuning](img/logistic-regression-hyperparameter-tuning.png)
 

@@ -1,0 +1,36 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "location": {
+      "value": "eastus2"
+    },
+    "workspaceName": {
+      "value": "azudacityml01"
+    },
+    "adminUserName": {
+      "value": "azureuser"
+    },
+    "computeInstanceName": {
+      "value": "cluster-demo-1"
+    },
+    "maxNodes": {
+      "value": 5
+    },
+    "minNodes": {
+      "value": 0
+    },
+    "nodeIdleTimeBeforeScaleDown": {
+      "value": "PT120S"
+    },
+    "remoteLoginPortPublicAccess": {
+      "value": "NotSpecified"
+    },
+    "vmSize": {
+      "value": "Standard_DS3_v2"
+    },
+    "vmPriority": {
+      "value": "LowPriority"
+    }
+  }
+}
