@@ -3,19 +3,22 @@
 
 # Project #2: Operationalizing Machine Learning
 
-*TODO:*
+## Table of Content
+* [Overview](#overview)
+* [Architectural Diagram](#architectural-diagram)
+* [Key Steps](#architectural-diagram)
+    * [Authentication](#authentication)
+    * [Automated ML Experiment](#automated-ml-experiment)
+    * [Deploy the best model](#deploy-the-best-model)
+    * [Enable logging](#enable-logging)
+    * [Swagger Documentation](#swagger-documentation)
+    * [Consume model endpoints](#consume-model-endpoints)
+    * [Create and publish a pipeline](#create-and-publish-a-pipeline)
+* [Screen Recordin](#screen-recording)
+* [Standout Suggestions](#standout-suggestions)
+
+## Overview
 This is the second project of the Udacity Machine Learning Engineer with Microsoft Azure Nanodegree Program. I continued my work with the Bank Marketing dataset, where I used Azure to configure a cloud-based machine learning production model, deploy it and consume it. I also created, published, and consumed a pipeline.
-
-These are the steps I followed: 
-
-* Authentication
-* Automated ML Experiment
-* Deploy the best model
-* Enable logging
-* Swagger Documentation
-* Consume model endpoints
-* Create and publish a pipeline
-* Documentation
 
 ![Diagram Architecture](img/main-steps.png)
 
