@@ -1,6 +1,3 @@
-*NOTE:* This file is a template that you can use to create the README for your project. The *TODO* comments below will highlight the information you should be sure to include.
-
-
 # Project #2: Operationalizing Machine Learning
 
 ## Table of Content
@@ -20,6 +17,7 @@
 ## Overview
 This is the second project of the Udacity Machine Learning Engineer with Microsoft Azure Nanodegree Program. I continued my work with the Bank Marketing dataset, where I used Azure to configure a cloud-based machine learning production model, deploy it and consume it. I also created, published, and consumed a pipeline.
 
+<img src="img/main-steps.png" width="200">
 ![Diagram Architecture](img/main-steps.png)
 
 ## Architectural Diagram
