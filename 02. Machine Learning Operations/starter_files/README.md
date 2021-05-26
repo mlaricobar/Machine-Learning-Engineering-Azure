@@ -11,11 +11,11 @@
     * [Swagger Documentation](#swagger-documentation)
     * [Consume model endpoints](#consume-model-endpoints)
     * [Create and publish a pipeline](#create-and-publish-a-pipeline)
-* [Screen Recordin](#screen-recording)
+* [Screen Recording](#screen-recording)
 * [Standout Suggestions](#standout-suggestions)
 
 ## Overview
-This is the second project of the Udacity Machine Learning Engineer with Microsoft Azure Nanodegree Program. I continued my work with the Bank Marketing dataset, but this time I used Azure to configure a cloud-based machine learning production model, deploy it and consume it. I also created, published, and consumed a ML pipeline in order to show how we can automate the deployment of a ML model using Python SDK.
+This is the second project of the Udacity Machine Learning Engineer with Microsoft Azure Nanodegree Program. I continued my work with the [Bank Marketing](https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv) dataset, but this time I used Azure to configure a cloud-based machine learning production model, deploy it and consume it. I also created, published, and consumed a ML pipeline in order to show how we can automate the deployment of a ML model using Python SDK.
 
 ## Architectural Diagram
 These are the steps I followed in this project :
@@ -36,10 +36,24 @@ These are the steps I followed in this project :
 I used the free 30-days subscription offered by Azure, so I had to do this step and create a Service Principal and associate with the Azure ML Workspace.
 
 <img src="img/authentication/auth-1.png" width="800">
+Figure 1: Bank Marketing Dataset
 <img src="img/authentication/auth-2.png" width="800">
+Figure 1: Bank Marketing Dataset
 
 ### Automated ML Experiment
-In this step, I created an AutoML experiment to run using the [Bank Marketing](https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv) Dataset which was loaded in the Azure Workspace, choosing **'y'** as the target column.
+In this step, I created an AutoML experiment to run using the Bank Marketing Dataset which was loaded in the Azure Workspace, choosing **'y'** as the target column.
+
+I uploaded this dataset into the Azure ML Studio in the *Registered Dataset* Section using the url provided in the project.
+
+<img src="img/auto-ml-experiment/automl-exp-1.png" width="800">
+<img src="img/auto-ml-experiment/automl-exp-2.png" width="800">
+<img src="img/auto-ml-experiment/automl-exp-3.png" width="800">
+<img src="img/auto-ml-experiment/automl-exp-4.png" width="800">
+<img src="img/auto-ml-experiment/automl-exp-5.png" width="800">
+
+For the compute cluster, I used the Standard_DS12_v2 for the Virtual Machine and 1 as the minimum number of nodes.
+
+I ran the experiment using classification, without enabling Deep Learning. The run took some time to test various models and found the best model for the task.
 
 ### Deploy the best model
 To interact with the best chosen model for our task, we need to deploy it. This can be easily done in the Azure Machine Learning Studio, which provides us with an URL to send our test data to.
