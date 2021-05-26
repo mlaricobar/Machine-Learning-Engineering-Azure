@@ -20,6 +20,7 @@ This is the second project of the Udacity Machine Learning Engineer with Microso
 ## Architectural Diagram
 These are the steps I followed in this project :
 
+Figure 1: Mains steps for the Project
 <img src="img/main-steps.png" width="800">
 
 1. **Authentication** : I created a Service Principal (SP) in order to interact with the Azure ML Workspace because I worked in the free 30-day trial subscription that Azure offers when you create a new account.
@@ -35,20 +36,34 @@ These are the steps I followed in this project :
 ### Authentication
 I used the free 30-days subscription offered by Azure, so I had to do this step and create a Service Principal and associate with the Azure ML Workspace.
 
+First, I opened a cloud shell from the portal azure and install de Azure ML extension. After that, I created the Service Principal (SP).
+
+Figure 2: Install the Azure ML extension
 <img src="img/authentication/auth-1.png" width="800">
-Figure 1: Bank Marketing Dataset
+
+Then with the Object Id of the new Service Principal, I allow its access to the workspace.
+
+Figure 3: Allow the SP access in the workspace
 <img src="img/authentication/auth-2.png" width="800">
-Figure 1: Bank Marketing Dataset
 
 ### Automated ML Experiment
 In this step, I created an AutoML experiment to run using the Bank Marketing Dataset which was loaded in the Azure Workspace, choosing **'y'** as the target column.
 
 I uploaded this dataset into the Azure ML Studio in the *Registered Dataset* Section using the url provided in the project.
 
+Figure 4: Uploading from the dataset URL
 <img src="img/auto-ml-experiment/automl-exp-1.png" width="800">
+
+Figure 5: Settings and preview of the dataset
 <img src="img/auto-ml-experiment/automl-exp-2.png" width="800">
+
+Figure 6: Schema of the dataset
 <img src="img/auto-ml-experiment/automl-exp-3.png" width="800">
+
+Figure 7: Confirm details
 <img src="img/auto-ml-experiment/automl-exp-4.png" width="800">
+
+Figure 8: Registered dataset
 <img src="img/auto-ml-experiment/automl-exp-5.png" width="800">
 
 For the compute cluster, I used the Standard_DS12_v2 for the Virtual Machine and 1 as the minimum number of nodes.
