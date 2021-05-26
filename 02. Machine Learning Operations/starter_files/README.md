@@ -34,22 +34,22 @@ Figure 1: Mains steps for the Project
 ## Key Steps
 
 ### Authentication
-I used the free 30-days subscription offered by Azure, so I had to do this step and create a Service Principal and associate with the Azure ML Workspace.
+I used the free 30-days subscription offered by Azure, so I had to do this step and create a Service Principal and associate it with the Azure ML Workspace.
 
 First, I opened a cloud shell from the portal azure and install de Azure ML extension. After that, I created the Service Principal (SP).
 
-Figure 2: Install the Azure ML extension
+Figure 2: Install the Azure ML extension and create SP
 <img src="img/authentication/auth-1.png" width="800">
 
 Then with the Object Id of the new Service Principal, I allow its access to the workspace.
 
-Figure 3: Allow the SP access in the workspace
+Figure 3: Allow the SP access to the workspace
 <img src="img/authentication/auth-2.png" width="800">
 
 ### Automated ML Experiment
 In this step, I created an AutoML experiment to run using the Bank Marketing Dataset which was loaded in the Azure Workspace, choosing **'y'** as the target column.
 
-I uploaded this dataset into the Azure ML Studio in the *Registered Dataset* Section using the url provided in the project.
+First, I uploaded this dataset into the Azure ML Studio in the *Registered Dataset* Section using the url provided in the project.
 
 Figure 4: Uploading from the dataset URL
 <img src="img/auto-ml-experiment/automl-exp-1.png" width="800">
@@ -66,7 +66,15 @@ Figure 7: Confirm details
 Figure 8: Registered dataset
 <img src="img/auto-ml-experiment/automl-exp-5.png" width="800">
 
-For the compute cluster, I used the Standard_DS12_v2 for the Virtual Machine and 1 as the minimum number of nodes.
+Then, I created the Auto ML run choosing the recently created dataset.
+
+Figure 9: Selecting dataset in the Auto ML Run
+<img src="img/auto-ml-experiment/automl-exp-6.png" width="800">
+
+For the compute cluster, I used the size of **Standard_DS12_v2** for the Virtual Machine and 1 as the minimum number of nodes. Because I was working on a free subscription I coulnd't configurate more than 1 node in the *Maximum number of nodes*.
+
+<img src="img/auto-ml-experiment/automl-exp-7.png" width="800">
+
 
 I ran the experiment using classification, without enabling Deep Learning. The run took some time to test various models and found the best model for the task.
 
