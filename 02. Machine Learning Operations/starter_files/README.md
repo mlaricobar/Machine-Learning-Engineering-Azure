@@ -15,25 +15,28 @@
 * [Standout Suggestions](#standout-suggestions)
 
 ## Overview
-This is the second project of the Udacity Machine Learning Engineer with Microsoft Azure Nanodegree Program. I continued my work with the Bank Marketing dataset, where I used Azure to configure a cloud-based machine learning production model, deploy it and consume it. I also created, published, and consumed a pipeline.
+This is the second project of the Udacity Machine Learning Engineer with Microsoft Azure Nanodegree Program. I continued my work with the Bank Marketing dataset, but this time I used Azure to configure a cloud-based machine learning production model, deploy it and consume it. I also created, published, and consumed a ML pipeline in order to show how we can automate the deployment of a ML model using Python SDK.
 
 ## Architectural Diagram
-*TODO*: Provide an architectual diagram of the project and give an introduction of each step. An architectural diagram is an image that helps visualize the flow of operations from start to finish. In this case, it has to be related to the completed project, with its various stages that are critical to the overall flow. For example, one stage for managing models could be "using Automated ML to determine the best model". 
+These are the steps I followed in this project :
 
 <img src="img/main-steps.png" width="800">
 
-1. **Authentication** : In this step, we need to create a Security Principal (SP) to interact with the Azure Workspace.
-2. **Automated ML Experiment** : In this step, we create an experiment using Automated ML, configure a compute cluster, and use that cluster to run the experiment.
-3. **Deploy the best model** : Deploying the Best Model will allow us to interact with the HTTP API service and interact with the model by sending data over POST requests.
-4. **Enable logging** : Logging helps monitor our deployed model. It helps us know the number of requests it gets, the time each request takes, etc.
-5. **Swagger Documentation** : In this step, we consume the deployed model using Swagger.
-6. **Consume model endpoints** : We interact with the endpoint using some test data to get inference.
-7. **Create and publish a pipeline** : In this step, we automate this workflow by creating a pipeline with the Python SDK.
+1. **Authentication** : I created a Service Principal (SP) in order to interact with the Azure ML Workspace because I worked in the free 30-day trial subscription that Azure offers when you create a new account.
+2. **Automated ML Experiment** : I created an experiment using Automated ML, configure a compute cluster, and use that cluster to run the experiment.
+3. **Deploy the best model** : I deployed the Best Model in order to interact with its HTTP API service, that is to interact with the model by sending data over POST requests.
+4. **Enable logging** : I enabled logging because it helps me to monitor the deployed model in order to know the number of requests it gets, the time each request takes, etc.
+5. **Swagger Documentation** : I consumed the deployed model using Swagger.
+6. **Consume model endpoints** : I interacted with the endpoint using some test data to get inference.
+7. **Create and publish a pipeline** : I automate this workflow by creating a pipeline with the Python SDK.
 
 ## Key Steps
 
 ### Authentication
-I used the lab Udacity provided to us, so I skipped this step since I'm not authorized to create a security principal.
+I used the free 30-days subscription offered by Azure, so I had to do this step and create a Service Principal and associate with the Azure ML Workspace.
+
+<img src="img/authentication/auth-1.png" width="800">
+<img src="img/authentication/auth-2.png" width="800">
 
 ### Automated ML Experiment
 In this step, I created an AutoML experiment to run using the [Bank Marketing](https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv) Dataset which was loaded in the Azure Workspace, choosing **'y'** as the target column.
