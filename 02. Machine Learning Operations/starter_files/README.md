@@ -215,8 +215,12 @@ This is the pipeline created in the Pipelines section of Azure ML Studio.
 This is the Pipeline Overview in the Azure ML Studio.
 
 **Figure 34**: Pipeline Overview in Azure Studio
-<img src="img/pipeline/pipeline-3.png" width="800">
+<img src="img/pipeline/pipeline-4.png" width="800">
 
+This is the **REST endpoint** in Azure ML Studio, with a status of ACTIVE.
+
+**Figure 35**: The rest endppoint
+<img src="img/pipeline/pipeline-3.png" width="800">
 
 
 ## Screen Recording
