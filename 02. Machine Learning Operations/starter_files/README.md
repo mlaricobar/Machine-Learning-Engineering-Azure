@@ -94,12 +94,16 @@ I ran the experiment using classification, without enabling Deep Learning. I ena
 **Figure 13**: Additional configurations
 <img src="img/auto-ml-experiment/automl-exp-10.png" width="800">
 
+
 **Figure 14**: Select task type
+
+
 <img src="img/auto-ml-experiment/automl-exp-11.png" width="800">
 
 The run took approximately 1 hour to test various models and found the best model for the task. The best algorithm found is the **votingEnsemble** with an accuracy of 92%.
 
-**Figure 14**: Experiment run details
+**Figure 15**: Experiment run details
+
 <img src="img/auto-ml-experiment/automl-exp-12.png" width="800">
 
 
