@@ -219,12 +219,12 @@ This is the Pipeline Overview in the Azure ML Studio.
 
 This is the **REST endpoint** in Azure ML Studio, with a status of ACTIVE.
 
-**Figure 35**: The rest endppoint
+**Figure 35**: The rest endpoint
 <img src="img/pipeline/pipeline-3.png" width="800">
 
-
 ## Screen Recording
-*TODO* Provide a link to a screen recording of the project in action. Remember that the screencast should demonstrate:
+
+Link: 
 
 ## Standout Suggestions
 *TODO (Optional):* This is where you can provide information about any standout suggestions that you have attempted.
