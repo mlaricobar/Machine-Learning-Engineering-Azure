@@ -71,9 +71,14 @@ Then, I created the Auto ML run choosing the recently created dataset.
 Figure 9: Selecting dataset in the Auto ML Run
 <img src="img/auto-ml-experiment/automl-exp-6.png" width="800">
 
-For the compute cluster, I used the size of **Standard_DS12_v2** for the Virtual Machine and 1 as the minimum number of nodes. Because I was working on a free subscription I coulnd't configurate more than 1 node in the *Maximum number of nodes*.
+For the compute cluster, I used the size of **Standard_DS12_v2** for the Virtual Machine and 1 as the minimum number of nodes. Due to I was working on a free subscription I coulnd't configurate more than 1 node in the *Maximum number of nodes*, but it was not a big problem. The experiment took approximately 1 hour.
 
+Figure 10: Selecting the vm size for the compute cluster
 <img src="img/auto-ml-experiment/automl-exp-7.png" width="800">
+
+Figure 11: Configuring # of nodes
+<img src="img/auto-ml-experiment/automl-exp-8.png" width="800">
+
 
 
 I ran the experiment using classification, without enabling Deep Learning. The run took some time to test various models and found the best model for the task.
