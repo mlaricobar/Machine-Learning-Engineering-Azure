@@ -61,9 +61,14 @@ Figure 6: Schema of the dataset
 <img src="img/auto-ml-experiment/automl-exp-3.png" width="800">
 
 Figure 7: Confirm details
+
 <img src="img/auto-ml-experiment/automl-exp-4.png" width="800">
 
+
+
 Figure 8: Registered dataset
+
+
 <img src="img/auto-ml-experiment/automl-exp-5.png" width="800">
 
 After that, I created the Auto ML run choosing the recently created dataset.
