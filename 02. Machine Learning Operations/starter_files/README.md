@@ -182,10 +182,20 @@ After updating both the **scoring_uri** and the **key** to match the key for my 
 **Figure 29**: Running endpoint.py
 <img src="img/consume/consume-2.png" width="800">
 
-
-
 #### (Optional) Benchmark
-To do this, we make sure **Apache Benchmark** is installed and available. After executing the **endpoint.py** script, we run the **benchmark.sh** scripe to load-test our deployed model.
+To do this, I made sure **Apache Benchmark** was installed and available. 
+
+I need to update the **benchmark.sh** script.
+
+**Figure 30**: Updating benchmark.sh
+<img src="img/benchmark/benchmark-1.png" width="800">
+
+After executing the **endpoint.py** script, we run the **benchmark.sh** script to load-test our deployed model.
+
+**Figure 31**: Results after benchmark.sh execution
+<img src="img/benchmark/benchmark-2.png" width="800">
+
+As we can see, we got insights like Requests per second, Average time per request, Number of failed requests, etc.
 
 ### Create and publish a pipeline
 For this step, I used the **aml-pipelines-with-automated-machine-learning-step** Jupyter Notebook to create a **Pipeline**
