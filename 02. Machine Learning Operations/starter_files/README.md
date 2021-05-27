@@ -145,13 +145,32 @@ I could enabled the Application Insights and Logs at the time of the model deplo
 **Figure 22**: Results from logs.py execution
 <img src="img/logging/logging-4.png" width="800">
 
-By running the logs.py script, **we enable Application Insight**.
+By running the logs.py script, **I enabled Application Insights**.
 
-**Figure 23**: Application Insigth enabled for the endpoint
+**Figure 23**: Application Insights enabled for the endpoint
 <img src="img/logging/logging-5.png" width="800">
 
 ### Swagger Documentation
-To consume our best AutoML model using Swagger, we first need to download the **swagger.json** file provided to us in the Endpoints section of Azure Machine Learning Studio.
+To consume our best AutoML model using Swagger, I first needed to download the **swagger.json** file provided to us in the Endpoints section of Azure Machine Learning Studio and to modify the **swagger.sh** and **serve.py** files.
+
+**Figure 24**: Swagger.json, swagger.sh and serve.py
+<img src="img/swagger/swagger-1.png" width="800">
+
+Then we run the **swagger.sh** and **serve.py** files to be able to interact with the swagger instance running with the documentation for the HTTP API of the model.
+
+**Figure 25**: Running serve.py
+<img src="img/swagger/swagger-2.png" width="800">
+
+This is the content of the API, diplaying the methods used to interact with the model.
+
+**Figure 26**: API documentation - 1
+<img src="img/swagger/swagger-3.png" width="800">
+
+**Figure 27**: API documentation - 2
+<img src="img/swagger/swagger-4.png" width="800">
+
+
+
 
 ### Consume model endpoints
 Finally, it's time to interact with the model and feed some test data to it. We do this by providing the **scoring_uri** and the **key** to the **endpoint.py** script and running it.
