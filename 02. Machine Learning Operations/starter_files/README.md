@@ -125,10 +125,26 @@ The model was successfully deployed. So, I could access the model endpoint in th
 <img src="img/deployment/deployment-5.png" width="800">
 
 
-
-
 ### Enable logging
-Enabling Application Insights and Logs could have been done at the time of deployment, but for this project we achieved it using Azure Python SDK.
+I could enabled the Application Insights and Logs at the time of the model deployment, however for this project I achieved it using Azure Python SDK through the logs.py file.
+
+**Figure 19**: Updating logs.py
+<img src="img/logging/logging-1.png" width="800">
+
+
+**Figure 20**: Config.json and logs.py
+<img src="img/logging/logging-2.png" width="800">
+
+**Figure 21**: Executing logs.py
+<img src="img/logging/logging-3.png" width="800">
+
+**Figure 22**: Results from logs.py execution
+<img src="img/logging/logging-4.png" width="800">
+
+By running the logs.py script, we enable Application Insight.
+
+**Figure 23**: Application Insigth enabled for the endpoint
+<img src="img/logging/logging-5.png" width="800">
 
 ### Swagger Documentation
 To consume our best AutoML model using Swagger, we first need to download the **swagger.json** file provided to us in the Endpoints section of Azure Machine Learning Studio.
