@@ -202,10 +202,22 @@ For this step, I used the **aml-pipelines-with-automated-machine-learning-step.i
 
 I created, consumed and published the best model for the bank marketing dataset using AutoML with Python SDK.
 
-**Figure 32**: Create a pipeline with Python SDK
+**Figure 32**: Pipeline running with Python SDK
 <img src="img/pipeline/pipeline-1.png" width="800">
 
-*TODO*: Write a short discription of the key steps. Remeber to include all the screenshots required to demonstrate key steps. 
+After updating the notebook to have the same keys, URI, dataset, cluster, and model names already created, I run through the cells to create a pipeline.
+
+This is the pipeline created in the Pipelines section of Azure ML Studio.
+
+**Figure 33**: Pipeline running in Azure Studio
+<img src="img/pipeline/pipeline-2.png" width="800">
+
+This is the Pipeline Overview in the Azure ML Studio.
+
+**Figure 34**: Pipeline Overview in Azure Studio
+<img src="img/pipeline/pipeline-3.png" width="800">
+
+
 
 ## Screen Recording
 *TODO* Provide a link to a screen recording of the project in action. Remember that the screencast should demonstrate:
