@@ -112,6 +112,8 @@ In order to interact with the best chosen model for our task, we need to deploy 
 In this step, I deployed the trained Voting Ensemble model using Azure Container Instance (ACI), with authentication enabled.
 
 **Figure 16**: Best Model
+
+
 <img src="img/deployment/deployment-1.png" width="800">
 
 **Figure 17**: Deployment of the model
