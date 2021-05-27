@@ -63,7 +63,6 @@ Figure 6: Schema of the dataset
 Figure 7: Confirm details
 <img src="img/auto-ml-experiment/automl-exp-4.png" width="800">
 
-
 Figure 8: Registered dataset
 <img src="img/auto-ml-experiment/automl-exp-5.png" width="800">
 
