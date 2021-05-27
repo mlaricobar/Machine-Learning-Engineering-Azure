@@ -86,9 +86,23 @@ Due to I was working on a free subscription I coulnd't configurate more than 1 n
 **Figure 11**: Configuring # of nodes
 <img src="img/auto-ml-experiment/automl-exp-8.png" width="800">
 
+**Figure 12**: Configuring the experiment run
+<img src="img/auto-ml-experiment/automl-exp-9.png" width="800">
+
+I ran the experiment using classification, without enabling Deep Learning. I enabled the *explain best model* option in order to interpret the results from the best model.
+
+**Figure 13**: Additional configurations
+<img src="img/auto-ml-experiment/automl-exp-10.png" width="800">
+
+**Figure 14**: Select task type
+<img src="img/auto-ml-experiment/automl-exp-11.png" width="800">
+
+The run took approximately 1 hour to test various models and found the best model for the task. The best algorithm found is the **votingEnsemble** with an accuracy of 92%.
+
+**Figure 14**: Experiment run details
+<img src="img/auto-ml-experiment/automl-exp-12.png" width="800">
 
 
-I ran the experiment using classification, without enabling Deep Learning. The run took some time to test various models and found the best model for the task.
 
 ### Deploy the best model
 To interact with the best chosen model for our task, we need to deploy it. This can be easily done in the Azure Machine Learning Studio, which provides us with an URL to send our test data to.
