@@ -198,9 +198,12 @@ After executing the **endpoint.py** script, we run the **benchmark.sh** script t
 As we can see, we got insights like Requests per second, Average time per request, Number of failed requests, etc.
 
 ### Create and publish a pipeline
-For this step, I used the **aml-pipelines-with-automated-machine-learning-step** Jupyter Notebook to create a **Pipeline**
+For this step, I used the **aml-pipelines-with-automated-machine-learning-step.ipynb** Jupyter Notebook to create a **Pipeline**.
 
 I created, consumed and published the best model for the bank marketing dataset using AutoML with Python SDK.
+
+**Figure 32**: Create a pipeline with Python SDK
+<img src="img/pipeline/pipeline-1.png" width="800">
 
 *TODO*: Write a short discription of the key steps. Remeber to include all the screenshots required to demonstrate key steps. 
 
