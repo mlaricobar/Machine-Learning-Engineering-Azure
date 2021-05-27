@@ -159,21 +159,30 @@ To consume our best AutoML model using Swagger, I first needed to download the *
 Then we run the **swagger.sh** and **serve.py** files to be able to interact with the swagger instance running with the documentation for the HTTP API of the model.
 
 **Figure 25**: Running serve.py
+
 <img src="img/swagger/swagger-2.png" width="800">
 
 This is the content of the API, diplaying the methods used to interact with the model.
 
-**Figure 26**: API documentation - 1
+**Figure 26**: API documentation - part 1
 <img src="img/swagger/swagger-3.png" width="800">
 
-**Figure 27**: API documentation - 2
+**Figure 27**: API documentation - part 2
 <img src="img/swagger/swagger-4.png" width="800">
 
 
-
-
 ### Consume model endpoints
-Finally, it's time to interact with the model and feed some test data to it. We do this by providing the **scoring_uri** and the **key** to the **endpoint.py** script and running it.
+Finally, it was time to interact with the model and feed some test data to it. We do this by providing the **scoring_uri** and the **key** to the **endpoint.py** script and running it.
+
+After updating both the **scoring_uri** and the **key** to match the key for my service and the URI that was generated after deployment, I ran the **endpoint.py** script to get inference from the deployed model.
+
+**Figure 28**: Updating endpoint.py
+<img src="img/consume/consume-1.png" width="800">
+
+**Figure 29**: Running endpoint.py
+<img src="img/consume/consume-2.png" width="800">
+
+
 
 #### (Optional) Benchmark
 To do this, we make sure **Apache Benchmark** is installed and available. After executing the **endpoint.py** script, we run the **benchmark.sh** scripe to load-test our deployed model.
