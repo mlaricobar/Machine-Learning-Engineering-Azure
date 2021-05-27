@@ -106,10 +106,24 @@ The run took approximately 1 hour to test various models and found the best mode
 
 <img src="img/auto-ml-experiment/automl-exp-12.png" width="800">
 
-
-
 ### Deploy the best model
-To interact with the best chosen model for our task, we need to deploy it. This can be easily done in the Azure Machine Learning Studio, which provides us with an URL to send our test data to.
+In order to interact with the best chosen model for our task, we need to deploy it. This can be easily done in the Azure Machine Learning Studio, which provides us with an URL to send our test data to.
+
+In this step, I deployed the trained Voting Ensemble model using Azure Container Instance (ACI), with authentication enabled.
+
+**Figure 16**: Best Model
+<img src="img/auto-ml-experiment/deployment-1.png" width="800">
+
+**Figure 17**: Deployment of the model
+<img src="img/auto-ml-experiment/deployment-3.png" width="800">
+
+The model was successfully deployed. So, I could access the model endpoint in the Endpoints section of Azure ML Studio.
+
+**Figure 18**: Real-time endpoints
+<img src="img/auto-ml-experiment/deployment-5.png" width="800">
+
+
+
 
 ### Enable logging
 Enabling Application Insights and Logs could have been done at the time of deployment, but for this project we achieved it using Azure Python SDK.
