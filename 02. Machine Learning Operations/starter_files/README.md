@@ -216,7 +216,7 @@ This is the Pipeline Overview in the Azure ML Studio.
 
 **Figure 34**: Pipeline Overview in Azure Studio
 <img src="img/pipeline/pipeline-4.png" width="800">
-
+s
 This is the **REST endpoint** in Azure ML Studio, with a status of ACTIVE.
 
 **Figure 35**: The rest endpoint
@@ -224,7 +224,7 @@ This is the **REST endpoint** in Azure ML Studio, with a status of ACTIVE.
 
 ## Screen Recording
 
-Link: 
+See project in action: <a href="https://youtu.be/GXZqAYFzaJ8">Link<a>
 
 ## Standout Suggestions
-*TODO (Optional):* This is where you can provide information about any standout suggestions that you have attempted.
+I think that I could be better if I would do feature engineering. Maybe It could be added to the pipeline in order to get better results.
