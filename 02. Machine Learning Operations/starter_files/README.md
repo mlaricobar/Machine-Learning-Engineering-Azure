@@ -216,11 +216,18 @@ This is the Pipeline Overview in the Azure ML Studio.
 
 **Figure 34**: Pipeline Overview in Azure Studio
 <img src="img/pipeline/pipeline-4.png" width="800">
-s
+
+
 This is the **REST endpoint** in Azure ML Studio, with a status of ACTIVE.
 
 **Figure 35**: The rest endpoint
 <img src="img/pipeline/pipeline-3.png" width="800">
+
+The **“Published Pipeline overview”**, showing a REST endpoint and a status of ACTIVE.
+
+**Figure 35**: Published Pipeline overview
+<img src="img/pipeline/pipeline-5.png" width="800">
+
 
 ## Screen Recording
 
