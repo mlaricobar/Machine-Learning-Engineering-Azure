@@ -231,7 +231,7 @@ The **“Published Pipeline overview”**, showing a REST endpoint and a status 
 
 ## Screen Recording
 
-See project in action: <a href="https://www.youtube.com/watch?v=9otCh9KWx1U">Link<a>
+See project in action: <a href="https://www.youtube.com/watch?v=Pz6VttVqZGw">Link<a>
 
 ## Standout Suggestions
 I think that I could be better if I would do feature engineering. Maybe It could be added to the pipeline in order to get better results.
