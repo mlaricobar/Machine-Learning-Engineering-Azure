@@ -1,8 +1,13 @@
 *NOTE:* This file is a template that you can use to create the README for your project. The *TODO* comments below will highlight the information you should be sure to include.
 
-# Your Project Title Here
+# Capstone Project for Azure Machine Learning Engineer Nanodegree in Udacity
 
-*TODO:* Write a short introduction to your project.
+This is the capstone project for the "Machine Learning Engineer for Microsoft Azure" Udacity's Nanodegree. 
+
+In this project, I chose an external dataset from a Kaggle Competition organized by a Peruvian Bank where the objective was to predict the default score for the customers. I just used two of the different datasets that the competition offered to the participants and made a preprocessing to get a unique train dataset. 
+
+This dataset will be used to train a model using an Automated ML and a Hyperdrive. After that, I compared the performance of the
+two different algorithms and deploy the best model. Finally the endpoint produced was used to get some answers about predictions.
 
 ## Project Set Up and Installation
 *OPTIONAL:* If your project has any special installation steps, this is where you should put it. To turn this project into a professional portfolio project, you are encouraged to explain how to set up this project in AzureML.
