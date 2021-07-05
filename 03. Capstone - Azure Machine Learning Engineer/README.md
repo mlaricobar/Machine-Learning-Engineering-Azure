@@ -40,9 +40,9 @@ The following came out from the running of the experiments:
 * score.py : I downloaded this script from Azure Machine Learning Studio and it is used to deploy the model.
 * hyper-model.pkl : This is the best model from the HyperDrive I downloaded from Azure ML studio.
 
-## Dataset overview
+## Dataset
 
-### Overview
+### Dataset overview
 The dataset I used is from a [Peruvian Kaggle Competition](https://www.kaggle.com/c/interbank20) where there are like 4 datasets. I just used two of them: rcc_train (dataset about the debts that customers has in the financial system) and se_train (socio economic features about customers). I pre-processed the data before I uploaded to the Azure Machine Learning worskpace in the dataset-preprocessing.ipynb notebook. It describes the financial behaviour of the customers. The data have almost 355K rows of these behaviours recorded from customers.
 
 **Figure 2**: Dataset sample
