@@ -291,7 +291,7 @@ This screenshot shows the Deploy Status as Succeeded(left). This is inside the b
 
 ## Screen Recording
 
-[Here]() you can see a screen recording which shows : 
+[Here](https://youtu.be/kGlXMuFMBMw) you can see a screen recording which shows : 
 - A working model
 - Demo of the deployed  model
 - Demo of a sample request sent to the endpoint and its response
