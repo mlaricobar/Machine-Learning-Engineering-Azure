@@ -89,6 +89,32 @@ I upload the dataset in the Azure ML studio from local file **dataset_train.csv*
 <img src="img/dataset-detail.png" width="800">
 
 ## Automated ML
+
+The AutoML settings I have used are below : 
+
+
+```
+automl_settings = {
+                    "experiment_timeout_minutes": 20,
+                    "max_concurrent_iterations": 4,
+                    "primary_metric" : 'AUC_weighted',
+                    "n_cross_validations": 5,
+                    "enable_early_stopping": True,
+                    "max_cores_per_iteration": -1
+                    }
+```      
+
+```
+automl_config = AutoMLConfig(compute_target=compute_target,
+                             task = "classification",
+                             training_data=dataset,
+                             label_column_name="target",
+                             path = project_folder,
+                             featurization= 'auto',
+                             debug_log = "automl_errors.log",
+                             **automl_settings
+                            )
+```
 *TODO*: Give an overview of the `automl` settings and configuration you used for this experiment
 
 ### Results
