@@ -229,16 +229,20 @@ runId | HD_7e008354-d37f-4527-b77c-adb5b4bb6d3a_30
  Max Iterations | 300
  
 This screenshot is inside the Jupyter Notebook hyperparameter_tuning.ipynb shows all the details of the best run, its id, its ```automl_settings``` and many other details such as the compute target at which ran:
+
+
 **Figure 10**: HyperDrive Experiment - Details from notebook
-<img src="img/best_run_hyperdrive_model_1.png   " width="800">
+<img src="img/best_run_hyperdrive_model_1.png" width="800">
 
 ![best_run_hyperdrive_model_2.png](/Screenshots/best_run_hyperdrive_model_2.png)
 The below screenshots are from the Azure ML studio but not from the Jupyter Notebook. It is in the Experiment section in the Run of Hyperdrive inside the best Run. The best Run here is not another algorithm but specific parameters (C,max_iter) of the same algorithm applies to each run inside the Hyperdrive run: 
+
+
 **Figure 11**: HyperDrive Experiment - Details from ML Studio
-<img src="img/best_run_hyperdrive_model_2.png   " width="800">
+<img src="img/best_run_hyperdrive_model_2.png" width="800">
 
 **Figure 12**: HyperDrive Best Run - Details from ML Studio
-<img src="img/best_run_hyperdrive_model_3.png   " width="800">
+<img src="img/best_run_hyperdrive_model_3.png" width="800">
 
 We can understand that there is a lot of difference from the perspective of accuracy between the Hyperdrive and the AutoML since the last hit an accuracy of ```0.72373``` and the hyperdive's accuracy is ```0.858```. Some improvements for the Hypderdrive method could be :
 
@@ -249,14 +253,14 @@ We can understand that there is a lot of difference from the perspective of accu
 In the following screenshots we can see the `RunDetails` widget : 
 At the below screenshots we can see, back in the Jupyter Notebook hyperparameter_tuning.ipynb, the Run Details.
 
-**Figure 11**: HyperDrive Experiment - RunDetails Widget from Notebook
-<img src="img/run_details_widget_hyperdrive_1.png   " width="800">
+**Figure 13**: HyperDrive Experiment - RunDetails Widget from Notebook
+<img src="img/run_details_widget_hyperdrive_1.png" width="800">
 
-**Figure 11**: HyperDrive Experiment - RunDetails Widget from Notebook
-<img src="img/run_details_widget_hyperdrive_2.png   " width="800">
+**Figure 14**: HyperDrive Experiment - RunDetails Widget from Notebook
+<img src="img/run_details_widget_hyperdrive_2.png" width="800">
 
-**Figure 11**: HyperDrive Experiment - RunDetails Widget from Notebook
-<img src="img/run_details_widget_hyperdrive_3.png   " width="800">
+**Figure 15**: HyperDrive Experiment - RunDetails Widget from Notebook
+<img src="img/run_details_widget_hyperdrive_3.png" width="800">
 
 ## Model Deployment
 *TODO*: Give an overview of the deployed model and instructions on how to query the endpoint with a sample input.
