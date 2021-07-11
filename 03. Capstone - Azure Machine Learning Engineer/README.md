@@ -178,6 +178,218 @@ At the below screenshots we can see, back in the Jupyter Notebook automl.ipynb, 
 **Figure 9**: RunDetails Widget from Notebook
 <img src="img/run_details_widget_automl_2.png" width="800">
 
+
+### AutoML Parameters
+
+The best model from the automl experiment was an Stacking Ensemble of 5 base models with a meta learner of Logistic Regression. Below, there are the base learner with their parameters:
+
+* ``` Base learner 1: ``` :
+
+```
+Pipeline(memory=None, steps=[('standardscalerwrapper', StandardScalerWrapper(copy=True, with_mean=False, with_std=False)),
+                            ('xgboostclassifier', XGBoostClassifier(booster='gbtree', 
+                                                                    colsample_bytree=0.9, 
+                                                                    eta=0.01, 
+                                                                    gamma=0, 
+                                                                    grow_policy='lossguide', 
+                                                                    max_bin=255, 
+                                                                    max_depth=8, 
+                                                                    max_leaves=0, 
+                                                                    n_estimators=200, 
+                                                                    n_jobs=-1, 
+                                                                    objective='reg:logistic', 
+                                                                    problem_info=ProblemInfo(...
+                                                                                            iteration_timeout_param=None,
+                                                                                            feature_column_names=None,
+                                                                                            label_column_name=None,
+                                                                                            weight_column_name=None,
+                                                                                            cv_split_column_names=None,
+                                                                                            enable_streaming=None,
+                                                                                            timeseries_param_dict=None,
+                                                                                            gpu_training_param_dict={'processing_unit_type': 'cpu'}
+                                                                    ),
+                                                                    random_state=0,
+                                                                    reg_alpha=2.0833333333333335,
+                                                                    reg_lambda=2.0833333333333335,
+                                                                    subsample=0.6,
+                                                                    tree_method='hist')
+                            )],verbose=False)
+```
+
+* ``` Base learner 2: ``` :
+
+```
+Pipeline(memory=None, steps=[('maxabsscaler', MaxAbsScaler(copy=True)),
+                            ('lightgbmclassifier', LightGBMClassifier(min_data_in_leaf=20,
+                                                                        n_jobs=-1, 
+                                                                        problem_info=ProblemInfo(
+                                                                                            dataset_samples=354663,
+                                                                                            dataset_features=81,
+                                                                                            dataset_classes=2,
+                                                                                            dataset_num_categorical=0,
+                                                                                            dataset_categoricals=None,
+                                                                                            pipeline_categoricals=None,
+                                                                                            dataset_y_std=None,
+                                                                                            dataset_uid=None,
+                                                                                            subsampli...
+                                                                                            subsampling_schedule='hyperband_clip',
+                                                                                            cost_mode_param=None,
+                                                                                            iteration_timeout_mode=0,
+                                                                                            iteration_timeout_param=None,
+                                                                                            feature_column_names=None,
+                                                                                            label_column_name=None,
+                                                                                            weight_column_name=None,
+                                                                                            cv_split_column_names=None,
+                                                                                            enable_streaming=None,
+                                                                                            timeseries_param_dict=None,
+                                                                                            gpu_training_param_dict={'processing_unit_type': 'cpu'}
+                                                                                            ),
+                                                                    random_state=None)
+                            )], verbose=False)
+```
+
+* ``` Base learner 3: ``` :
+
+```
+Pipeline(memory=None, steps=[('maxabsscaler', MaxAbsScaler(copy=True)),
+                            ('lightgbmclassifier', LightGBMClassifier(boosting_type='gbdt', 
+                                                                    colsample_bytree=0.7922222222222222, 
+                                                                    learning_rate=0.1, 
+                                                                    max_bin=270, 
+                                                                    max_depth=-1, 
+                                                                    min_child_weight=7, 
+                                                                    min_data_in_leaf=0.020697586206896556, 
+                                                                    min_split_gain=0.15789473684210525, 
+                                                                    n_estimators=200, 
+                                                                    n_jobs=-1, 
+                                                                    num_leaves=239, 
+                                                                    proble...(
+                                                                                iteration_timeout_param=None,
+                                                                                feature_column_names=None,
+                                                                                label_column_name=None,
+                                                                                weight_column_name=None,
+                                                                                cv_split_column_names=None,
+                                                                                enable_streaming=None,
+                                                                                timeseries_param_dict=None,
+                                                                                gpu_training_param_dict={'processing_unit_type': 'cpu'}),
+                                                                    random_state=None, 
+                                                                    reg_alpha=0.2631578947368421, 
+                                                                    reg_lambda=0.05263157894736842, 
+                                                                    subsample=0.8415789473684211)
+        )],verbose=False)
+```
+
+* ``` Base learner 4: ``` :
+
+```
+Pipeline(memory=None, steps=[('standardscalerwrapper', StandardScalerWrapper(copy=True, with_mean=False, with_std=False)),
+                            ('xgboostclassifier', XGBoostClassifier(booster='gbtree',
+                                                                    colsample_bytree=1, 
+                                                                    eta=0.001, 
+                                                                    gamma=0.1, 
+                                                                    grow_policy='lossguide', 
+                                                                    max_bin=1023, 
+                                                                    max_depth=0, 
+                                                                    max_leaves=63, 
+                                                                    n_estimators=25, 
+                                                                    n_jobs=-1, 
+                                                                    objective='reg:logistic', 
+                                                                    problem_info=ProblemInf...(
+                                                                                            iteration_timeout_mode=0,
+                                                                                            iteration_timeout_param=None,
+                                                                                            feature_column_names=None,
+                                                                                            label_column_name=None,
+                                                                                            weight_column_name=None,
+                                                                                            cv_split_column_names=None,
+                                                                                            enable_streaming=None,
+                                                                                            timeseries_param_dict=None,
+                                                                                            gpu_training_param_dict={'processing_unit_type': 'cpu'}
+                                                                                            ),
+                                                                    random_state=0, 
+                                                                    reg_alpha=0, 
+                                                                    reg_lambda=1.7708333333333335, 
+                                                                    subsample=0.9, 
+                                                                    tree_method='hist')
+                        )], verbose=False)
+```
+
+* ``` Base learner 5: ``` :
+
+```
+Pipeline(memory=None, steps=[('maxabsscaler', MaxAbsScaler(copy=True)),
+                            ('xgboostclassifier', XGBoostClassifier(n_jobs=-1, 
+                                                                    problem_info=ProblemInfo(
+                                                                                            dataset_samples=354663,
+                                                                                            dataset_features=81,
+                                                                                            dataset_classes=2,
+                                                                                            dataset_num_categorical=0,
+                                                                                            dataset_categoricals=None,
+                                                                                            pipeline_categoricals=None,
+                                                                                            dataset_y_std=None,
+                                                                                            dataset_uid=None,
+                                                                                            subsampling=False,
+                                                                                            task='classif...
+                                                                                            subsampling_schedule='hyperband_clip',
+                                                                                            cost_mode_param=None,
+                                                                                            iteration_timeout_mode=0,
+                                                                                            iteration_timeout_param=None,
+                                                                                            feature_column_names=None,
+                                                                                            label_column_name=None,
+                                                                                            weight_column_name=None,
+                                                                                            cv_split_column_names=None,
+                                                                                            enable_streaming=None,
+                                                                                            timeseries_param_dict=None,
+                                                                                            gpu_training_param_dict={'processing_unit_type': 'cpu'}
+                                                                                            ), 
+                                                                    random_state=0, 
+                                                                    tree_method='auto')
+                            )], verbose=False)
+```
+
+* ``` Meta learner: ``` :
+
+```
+LogisticRegressionCV(
+                        Cs=10,
+                        class_weight=None,
+                        cv=None,
+                        dual=False,
+                        fit_intercept=True,
+                        intercept_scaling=1.0,
+                        l1_ratios=None,
+                        max_iter=100,
+                        multi_class='auto',
+                        n_jobs=None,
+                        penalty='l2',
+                        random_state=None,
+                        refit=True,
+                        scoring=<azureml.automl.runtime.stack_ensemble_base.Scorer object at 0x7fb2792c24e0>,
+                        solver='lbfgs',
+                        tol=0.0001,
+                        verbose=0
+    )
+```
+
+For example, the first base learner contains the following parameters:
+
+* ``` colsample_bytree = 0.9``` :  is the subsample ratio of columns when constructing each tree. Subsampling occurs once for every tree constructed.
+
+* ``` eta = 0.1``` : Step size shrinkage used in update to prevents overfitting. After each boosting step, we can directly get the weights of new features, and eta shrinks the feature weights to make the boosting process more conservative.
+
+* ``` gamma = 0``` : Minimum loss reduction required to make a further partition on a leaf node of the tree. The larger gamma is, the more conservative the algorithm will be.
+
+* ``` max_depth = 8``` : Maximum depth of a tree. Increasing this value will make the model more complex and more likely to overfit. 0 is only accepted in lossguided growing policy when tree_method is set as hist or gpu_hist and it indicates no limit on depth. Beware that XGBoost aggressively consumes memory when training a deep tree.
+
+* ``` max_leaves = 0``` : Maximum number of nodes to be added.
+
+* ``` n_estimators = 200``` : Number of trees trained on.
+
+* ``` reg_alpha = 2.0833333333333335``` : L1 regularization term on weights. Increasing this value will make model more conservative.
+
+* ``` reg_lambda = 2.0833333333333335``` : L2 regularization term on weights. Increasing this value will make model more conservative. Normalised to number of training examples.
+
+* ``` subsample = 0.6``` : Subsample ratio of the training instances. Setting it to 0.5 means that XGBoost.
+
 ## Hyperparameter Tuning
 
 The algorithm chosen for the training is Logistic Regression because the data is normalized and also regression models are more imterpretable. The two hyperparameters of the Logistic Regression are tuned with the hyperdrive to find the model with the best accuracy on the validation set. The two hyperparameters are the following:
@@ -296,7 +508,12 @@ This screenshot shows the Deploy Status as Succeeded(left). This is inside the b
 - Demo of the deployed  model
 - Demo of a sample request sent to the endpoint and its response
 
-## Standout Suggestions
+## Future Improvements
 
 * I have pointed the future improvements I would suggest for both the AutoML and the HyperDrive in the corresponding sections. 
 * About the dataset I would suggest to increase the other data sources in order to create new features.
+* Benchmarking can be done using Apache Benchmark command-line tool to keep the performance of the model in check and above a standard level. It is used to determine the response time in seconds for the model that is deployed. 
+* We could try different models to get the best possible one. 
+* If we reduced the duration of the experiment or increased the number of processes running in parallel then the experiment will be fast and time can be save - however resource costs may increase. 
+* The use of the Kubernetes service can be helpful in case we add more data to the existing dataset. 
+* Lastly, the exploration of possibly using Deep Learning to get to a more accurate model.
