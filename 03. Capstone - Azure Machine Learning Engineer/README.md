@@ -160,7 +160,7 @@ This screenshot is from the Azure ML studio but not from the Jupyter Notebook. I
 **Figure 6**: AutoML Experiment - Details from ML Studio
 <img src="img/automl_best_run_2.png" width="800">
 
-Here we are in the the specific Run of Voting Ensemble within the general Run of AutoML we see in the above screenshot. It shows the accuracy, AUC micro, AUC macro(up and right) of this specific algorithm now. There are also again other details such as the duration and the id of this specific run:
+Here we are in the the specific Run of Stacking Ensemble within the general Run of AutoML we see in the above screenshot. It shows the accuracy, AUC micro, AUC macro of this specific algorithm. There are also again other details such as the duration and the id of this specific run:
 
 **Figure 7**: AutoML Best Run - Details from ML Studio
 <img src="img/automl_best_run_3.png" width="800">
@@ -180,8 +180,44 @@ At the below screenshots we can see, back in the Jupyter Notebook automl.ipynb, 
 <img src="img/run_details_widget_automl_2.png" width="800">
 
 ## Hyperparameter Tuning
-*TODO*: What kind of model did you choose for this experiment and why? Give an overview of the types of parameters and their ranges used for the hyperparameter search
 
+The algorithm chosen for the training is Logistic Regression because the data is normalized and also regression models are more imterpretable. The two hyperparameters of the Logistic Regression are tuned with the hyperdrive to find the model with the best accuracy on the validation set. The two hyperparameters are the following:
+
+* ``` C ``` : The inverse of the reqularization strength. The smaller the number the stronger the regularization.
+* ``` max_iter ```: Maximum number of iterations to converge.
+
+**Benefits of the parameter sampler**
+
+I chose the ```RandomParameterSampling```, the hyperparameters are randomly selected from the search space. The search space for the two hyperaparameters is the following:
+
+```
+   '--C' : choice(0.001,0.01,0.1,1,10,20,50,100,200,500,1000),
+   '--max_iter': choice(50,100,300)
+```
+
+where the choice define discrete space over the values. The benefits of the ```RandomParameterSampling```, is that it is more fast than for example the ```GridParameterSampling``` where all the possible values from the search space are used, and it supports early termination of low-performance runs.
+
+I chose the ```BanditPolicy``` which is an "aggressive" early stopping policy with the meaning that cuts more runs than a conservative one like the ```MedianStoppingPolicy```, so it saves computational time. There are three configuration parameters ```slack_factor, evaluation_interval(optional), delay_evaluation(optional)```. 
+
+* ```slack_factor/slack_amount``` : (factor) The slack allowed with respect to the best performing training run.(amount) Specifies the allowable slack as an absolute amount, instead of a ratio.
+
+* ```evaluation_interval``` : (optional) The frequency for applying the policy.
+
+* ```delay_evaluation``` : (optional) Delays the first policy evaluation for a specified number of intervals.
+
+I set ```delay_evaluation=5, evaluation_interval=2, slack_factor=0.1```.
+
+About the other parameters of the ```HyperDriveConfig``` : 
+
+* ```primary_metric_name='Accuracy'``` : Meaning that our interest is about the 'Accuracy'. 
+
+* ```primary_metric_goal=PrimaryMetricGoal.MAXIMIZE```: Meaning that we want to Maximize the primary metric and not minimize it for example.
+
+* ```policy=early_termination_policy``` : This is where I have set the policy I described above.
+
+* ```max_concurrent_runs=4 ``` : Maximum number of runs to run concurrently. Of course the best is 4 as it is the number of cluster nodes.
+
+* ```max_total_runs=50``` : Maximum number of runs.
 
 ### Results
 *TODO*: What are the results you got with your model? What were the parameters of the model? How could you have improved it?
