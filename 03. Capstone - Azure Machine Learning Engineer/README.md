@@ -234,7 +234,6 @@ This screenshot is inside the Jupyter Notebook hyperparameter_tuning.ipynb shows
 **Figure 10**: HyperDrive Experiment - Details from notebook
 <img src="img/best_run_hyperdrive_model_1.png" width="800">
 
-![best_run_hyperdrive_model_2.png](/Screenshots/best_run_hyperdrive_model_2.png)
 The below screenshots are from the Azure ML studio but not from the Jupyter Notebook. It is in the Experiment section in the Run of Hyperdrive inside the best Run. The best Run here is not another algorithm but specific parameters (C,max_iter) of the same algorithm applies to each run inside the Hyperdrive run: 
 
 
