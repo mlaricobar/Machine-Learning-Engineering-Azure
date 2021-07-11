@@ -261,13 +261,42 @@ At the below screenshots we can see, back in the Jupyter Notebook hyperparameter
 <img src="img/run_details_widget_hyperdrive_3.png" width="800">
 
 ## Model Deployment
-*TODO*: Give an overview of the deployed model and instructions on how to query the endpoint with a sample input.
+The best model came out from the AutoML, this is sure from what we have seen from the above results. 
+The model that I have deployed in order to consume it is the one that produced with the StackingEnsemble algorithm.
+
+About the deployment configurations, I will analyse some of them : 
+``` 
+aci_config = AciWebservice.deploy_configuration(cpu_cores = 1, 
+                                                       memory_gb = 4, 
+                                                       enable_app_insights= True)
+```
+* ``` AciWebservice ```: A deployed service is created from a model, script, and associated files. The resulting web service is a load-balanced, HTTP endpoint with a REST API. 
+* ``` enable_app_insights = True ```: Whether or not to enable AppInsights for this Webservice. I have enabled it and you can see exactly what is it viewing my screen recording video.
+
+Below you can see the screenshots of the endpoint as active.
+This screenshot is from inside the aciservice(the endpoint). It shows the endpoint as Healthy(up and left), the rest endpoint you must call it in order to consume the endpoint(down and left) and also the Swagger URI. It also shows which model has been deployed(middle left). 
+
+**Figure 16**: Model deployment - Status of the Service
+<img src="img/model_deployment_1.png" width="800">
+
+This screenshot shows the Deploy Status as Succeeded(middle right). This is inside the Experiment Run of AutoML.
+
+**Figure 17**: Model deployment - Experiment Run
+<img src="img/model_deployment_2.png" width="800">
+
+This screenshot shows the Deploy Status as Succeeded(left). This is inside the best Run of the Run of AutoML.
+
+**Figure 18**: HyperDrive Experiment - Experiment Best Run
+<img src="img/model_deployment_3.png" width="800">
 
 ## Screen Recording
-*TODO* Provide a link to a screen recording of the project in action. Remember that the screencast should demonstrate:
+
+[Here]() you can see a screen recording which shows : 
 - A working model
 - Demo of the deployed  model
 - Demo of a sample request sent to the endpoint and its response
 
 ## Standout Suggestions
-*TODO (Optional):* This is where you can provide information about any standout suggestions that you have attempted.
+
+* I have pointed the future improvements I would suggest for both the AutoML and the HyperDrive in the corresponding sections. 
+* About the dataset I would suggest to increase the other data sources in order to create new features.

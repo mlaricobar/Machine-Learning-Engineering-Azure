@@ -18,7 +18,7 @@ ds_path= "https://raw.githubusercontent.com/mlaricobar/Machine-Learning-Engineer
 #define x and y
 def ds(df):
     y=df.pop('target')
-    X=df.drop('key_value')
+    X=df.drop('key_value', axis=1)
     return X, y
 
 
