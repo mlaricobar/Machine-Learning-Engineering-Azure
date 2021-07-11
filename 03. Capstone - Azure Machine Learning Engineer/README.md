@@ -140,10 +140,44 @@ automl_config = AutoMLConfig(compute_target=compute_target,
 * ``` debug_log = "automl_errors.log" ``` : The debug information are written to the  ```automl_errors.log```.
 
 ### Results
-*TODO*: What are the results you got with your automated ML model? What were the parameters of the model? How could you have improved it?
 
-*TODO* Remeber to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
+In the below screenshots you can verify that the best run is the one at the below table: 
+Best algorightm | StackEnsemble
+--- | ---  
+Run Id | AutoML_36449ed6-91de-49f6-b34b-deb0dad4489b_30
+Accuracy | 0.72373
+AUC macro | 0.80141
+AUC micro | 0.80368
+AUC weighted | 0.80141
 
+This screenshot is inside the Jupyter Notebook automl.ipynb. It shows all the details of the best run, its id, its ```automl_settings``` and many other details such as the compute target at which ran:
+
+**Figure 5**: AutoML Best Run - Details from notebook
+<img src="img/automl_best_run_1.png" width="800">
+
+This screenshot is from the Azure ML studio but not from the Jupyter Notebook. It's in the Experiment Run of AutoML. It shows the best algorithm and its AUC weighted (0.80141).
+
+**Figure 6**: AutoML Experiment - Details from ML Studio
+<img src="img/automl_best_run_2.png" width="800">
+
+Here we are in the the specific Run of Voting Ensemble within the general Run of AutoML we see in the above screenshot. It shows the accuracy, AUC micro, AUC macro(up and right) of this specific algorithm now. There are also again other details such as the duration and the id of this specific run:
+
+**Figure 7**: AutoML Best Run - Details from ML Studio
+<img src="img/automl_best_run_3.png" width="800">
+
+I think that there is a lot of space to improve the above results. Some improvements could be : 
+1) I would let the algorithm to run for much more time. Thus I would change  ``` "experiment_timeout_minutes": 20 ``` to an hour or more. 
+2) I would disable the early stopping policy and thus set ``` enable_early_stopping = False```.
+3) I would include the other data sources provided by the competition in order to create new features.
+
+In the following screenshots we can see the `RunDetails` widget: 
+At the below screenshots we can see, back in the Jupyter Notebook automl.ipynb, the Run Details.
+
+**Figure 8**: RunDetails Widget from Notebook
+<img src="img/run_details_widget_automl_1.png" width="800">
+
+**Figure 9**: RunDetails Widget from Notebook
+<img src="img/run_details_widget_automl_2.png" width="800">
 
 ## Hyperparameter Tuning
 *TODO*: What kind of model did you choose for this experiment and why? Give an overview of the types of parameters and their ranges used for the hyperparameter search
