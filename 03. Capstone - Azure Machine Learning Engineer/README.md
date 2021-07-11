@@ -25,7 +25,6 @@ two different algorithms and deploy the best model. Finally the endpoint produce
 <img src="img/datathon-ibk.png" width="800">
 
 ## Project Set Up and Installation
-*OPTIONAL:* If your project has any special installation steps, this is where you should put it. To turn this project into a professional portfolio project, you are encouraged to explain how to set up this project in AzureML.
 
 ### Project Files 
 In this repo you will find the following files, which were required to run the experiments:
