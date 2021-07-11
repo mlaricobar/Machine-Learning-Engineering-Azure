@@ -220,6 +220,34 @@ About the other parameters of the ```HyperDriveConfig``` :
 * ```max_total_runs=50``` : Maximum number of runs.
 
 ### Results
+
+In the below screenshots you can verify that the best run is the one at the below table: 
+runId | HD_d145f066-c650-4d4a-877b-0b85cc305c65_0
+--- | ---  
+ Accuracy | 0.778 
+ Regularization Strength  | 500
+ Max Iterations | 50
+ 
+This screenshot is inside the Jupyter Notebook hyperparameter_tuning.ipynb shows all the details of the best run, its id, its ```automl_settings``` and many other details such as the compute target at which ran:
+**Figure 9**: RunDetails Widget from Notebook
+<img src="img/run_details_widget_automl_1.png" width="800">
+![best_run_hyperdrive_model_2.png](/Screenshots/best_run_hyperdrive_model_2.png)
+The below screenshots are from the Azure ML studio but not from the Jupyter Notebook. It is in the Experiment section in the Run of Hyperdrive inside the best Run. The best Run here is not another algorithm but specific parameters (C,max_iter) of the same algorithm applies to each run inside the Hyperdrive run: 
+![best_run_hyperdrive_model_1.png](/Screenshots/best_run_hyperdrive_model_1.png)
+![best_run_hyperdrive_model_3.png](/Screenshots/best_run_hyperdrive_model_3.png)
+
+We can understand that there is a lot of difference from the perspective of accuracy between the Hyperdrive and the AutoML since the last hit an accuracy of ```0.85622``` and the hyperdive's accuracy is ```0.778```. Some improvements for the Hypderdrive method could be :
+
+1) Set a ```GridParameterSampling``` so we can check more hyperparameters for better results.
+2) Change the policy to a more "conservative" one. I would set as policy the ```MedianStoppingPolicy``` so the runs wouldn't stop more easy.
+3) Set as ```max_total_runs``` a much more big number.
+
+In the following screenshots we can see the `RunDetails` widget : 
+At the below screenshots we can see, back in the Jupyter Notebook hyperparameter_tuning.ipynb, the Run Details. We see a every time another part of the widget but all the screenshots depict the same cell. We see the in these photos when the run started(1st screenshot), logs(2nd screenshot), when it finished and the compute target(3rd screenshot).
+![run_details_widget_hyperdrive_2.png](/Screenshots/run_details_widget_hyperdrive_2.png)
+![run_details_widget_hyperdrive_1.png](/Screenshots/run_details_widget_hyperdrive_1.png)
+![run_details_widget_hyperdrive_3.png](/Screenshots/run_details_widget_hyperdrive_3.png)
+
 *TODO*: What are the results you got with your model? What were the parameters of the model? How could you have improved it?
 
 *TODO* Remeber to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
