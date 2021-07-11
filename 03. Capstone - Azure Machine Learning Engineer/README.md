@@ -90,8 +90,7 @@ I upload the dataset in the Azure ML studio from local file **dataset_train.csv*
 
 ## Automated ML
 
-The AutoML settings I have used are below : 
-
+The AutoML settings I have used are below :
 
 ```
 automl_settings = {
@@ -115,7 +114,30 @@ automl_config = AutoMLConfig(compute_target=compute_target,
                              **automl_settings
                             )
 ```
-*TODO*: Give an overview of the `automl` settings and configuration you used for this experiment
+
+* ```n_cross_validations``` : The number of cross validations set to make when user validation data is not specified. The main set of data is split to ```n=5``` sets and it is performed train on 4 of the 5 and validation to the another set. So this procedure is performed 5 times, because we have ```n_cross_validations=5```. 
+
+* ```primary_metric = 'AUC_weighted' ``` :  The metric that Automated Machine Learning will optimize for model selection. We have set the 'AUC_weighted' because the class is imbalanced.
+
+* ``` enable_early_stopping = True``` : Whether to enable early termination if the score is not improving in the short term. 
+
+* ``` max_concurrent_iterations = 4``` : The maximum number of iterations that could be executed in parallel.  It is recommended you create a dedicated cluster per experiment, and match the number of max_concurrent_iterations of your experiment to the number of nodes in the cluster. This way, we use all the nodes of the cluster at the same time with the number of concurrent child runs/iterations you want. For this I set it to 4.
+
+* ``` experiment_timeout_minutes = 20 ``` :  It defines how long, in minutes, the experiment should continue to run. In this project we set to 20 minutos, but it's for sure that we could improve for better performance.
+
+* ``` compute_target = compute_target``` : The compute target with specific vm_size and max_nodes. The one that has been configured with name 'automl-cluster' in the automl.ipynb.
+
+* ``` task='classification' ``` : We have a classification task to do, we seek to predict whether or not the person will pay its debt. With other words we are trying to predict the ``` default ``` event.
+
+* ``` training_data = dataset ``` : The data on which the algorithm will be trained.
+
+* ``` label_column_name='target' ``` : The name of the column that contains the labels of the train data, i.e the target column we want to predict.
+
+* ``` path= project_folder``` : The path to the Azure ML folder of the project.
+
+* ``` featurization= 'auto' ``` : Indicator for whether featurization step should be done automatically or not, or whether customized featurization should be used. I used ``` auto``` so featurization step step should be done automatically.
+
+* ``` debug_log = "automl_errors.log" ``` : The debug information are written to the  ```automl_errors.log```.
 
 ### Results
 *TODO*: What are the results you got with your automated ML model? What were the parameters of the model? How could you have improved it?
