@@ -1,7 +1,12 @@
 
 az extension add -n azure-cli-ml
-az ad sp create-for-rbac --sdk-auth --name ml-auth-project-2
+az ad sp create-for-rbac --sdk-auth --name ml-auth-project-3
 
 az ad sp show --id c75557f4-c570-492c-aaac-be6400605b99
 
 az ml workspace share -w azudacityml01 -g RGUDACITYML01 --user e22cfc40-567e-4f40-b024-63babb743516 --role owner
+
+
+
+fredy.anicama@outlook.com
+
