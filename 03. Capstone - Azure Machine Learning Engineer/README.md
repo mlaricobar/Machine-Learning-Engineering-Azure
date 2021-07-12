@@ -504,7 +504,7 @@ This screenshot shows the Deploy Status as Succeeded(left). This is inside the b
 
 ### Model Consumption
 
-In order to consume the model, yo just need to send a request with data as an input:
+In order to consume the model, you just need to send a request with data as an input:
 
 * Input: 
 
