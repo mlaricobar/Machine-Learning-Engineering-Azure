@@ -588,6 +588,8 @@ resp = requests.post(scoring_uri, input_data, headers=headers)
 print(resp.json())
 ``` 
 
+A complete example in the endpoint.py python script.
+
 ## Screen Recording
 
 [Here](https://youtu.be/kGlXMuFMBMw) you can see a screen recording which shows : 
